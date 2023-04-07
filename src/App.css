@@ -36,3 +36,261 @@
     transform: rotate(360deg);
   }
 }
+
+.container {
+  padding: 5% 0% 0% 5%;
+  display: flex;
+  flex-direction: row;
+  justify-content:flex-start;
+}
+
+.Skills {
+  animation: move-text 2s forwards;
+}
+
+@keyframes move-text {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(1500%);
+  }
+}
+
+.WorkExperience {
+  animation: move-text2 2s 2s forwards;
+}
+
+@keyframes move-text2 {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(1250%);
+    transform: translate(150px,265px)
+  }
+}
+
+.Certifications {
+  animation: move-text3 2s 4s forwards;
+}
+
+@keyframes move-text3 {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(1200%);
+    transform: translate(300px,215px)
+  }
+}
+
+.Education {
+  animation: move-text4 2s 6s forwards;
+}
+
+@keyframes move-text4 {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(1200%);
+    transform: translate(450px,165px)
+  }
+}
+
+.Achievements{
+  animation: move-text5 2s 8s forwards;
+}
+
+@keyframes move-text5 {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(1200%);
+    transform: translate(600px,115px)
+  }
+}
+
+.POC{
+  animation: move-text6 2s 10s forwards;
+}
+
+@keyframes move-text6 {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(1200%);
+    transform: translate(750px,65px)
+  }
+}
+
+@keyframes reset-position {
+  from {
+    transform: translateY(1500%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes reset-position1 {
+  from {
+    transform: translateY(1250%);
+    transform: translate(150px,265px)
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes reset-position2 {
+  from {
+    transform: translateY(1200%);
+    transform: translate(300px,215px)
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes reset-position3 {
+  from {
+    transform: translateY(1200%);
+    transform: translate(450px,165px)
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes reset-position4 {
+  from {
+    transform: translateY(1200%);
+    transform: translate(600px,115px)
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes reset-position5 {
+  from {
+    transform: translateY(1200%);
+    transform: translate(750px,65px)
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+.Skills {
+  animation: move-text 2s forwards,reset-position 2s linear 15s forwards;
+}
+
+.WorkExperience {
+  animation: move-text2 2s 2s forwards,reset-position1 2s linear 17s forwards;
+}
+.Certifications {
+  animation: move-text3 2s 4s forwards,reset-position2 2s linear 19s forwards;
+}
+.Education {
+  animation: move-text4 2s 6s forwards,reset-position3 2s linear 21s forwards;
+}
+.Achievements{
+  animation: move-text5 2s 8s forwards,reset-position4 2s linear 23s forwards;
+}
+.POC{
+  animation: move-text6 2s 10s forwards,reset-position5 2s linear 25s forwards;
+}
+
+.ball {
+ width: 10%;
+ height: 100%;
+ background-color: #067b9c;
+ position: absolute;
+ left: 10%;
+ bottom: 0;
+ transform: rotate(200deg);z-index: -1;
+}
+
+
+
+.horizontalGrid {
+  /* padding-left: 50px; */
+  display: grid;
+  /* display: flex; */
+  grid-template-columns: auto auto auto auto;
+  margin: -21% 0 0 25%;
+
+}
+
+.horizontalGrid1 {
+  /* padding-left: 50px; */
+  display: grid;
+  /* display: flex; */
+  grid-template-columns: auto auto auto auto;
+  margin: -18% 0 0 25%;
+
+}
+
+.SkillReact {
+  position: relative;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  padding: 2%  2%  2%  2%;
+  margin-left: 5%;
+ }
+
+ .SkillJs {
+  position: relative;
+  animation-name: bounce;
+  animation-duration: 2s;
+  animation-delay: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  padding: 2%  2%  2%  2%;
+  margin-left: 5%;
+ }
+
+ @keyframes bounce {
+  0% { top: 0;}
+  50% { top: 30px;}
+  100% {top:0}
+ }
+
+.alignImageDirect2 {
+  display: grid;
+  /* display: flex; */
+  grid-template-columns: auto auto auto auto;
+  /* flex-direction: row;
+  flex-wrap: wrap; */
+}
+
+.imageSet2 {
+  margin: 10px;
+  padding: 10px;
+  border: 2px solid white;
+  transition: transform 2s;
+  /* transform: scale(0.5); */
+}
+
+.imageSet2:hover {
+  /* margin: 150px; */
+  transform: perspective(500px) scale(3, 3);
+  z-index: 1;
+}
+
+@font-face {
+  font-family: 'Alkatra';
+  font-weight: 900;
+  src: local('Alkatra'), url(./Fonts/Alkatra-VariableFont_wght.ttf) format('truetype');
+}
+
+p,ul,h1 {
+  font-family: Alkatra,Arial, Helvetica, sans-serif;
+}
