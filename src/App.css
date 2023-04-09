@@ -85,7 +85,7 @@
   }
 }
 
-.Education {
+.Educations {
   animation: move-text4 2s 6s forwards;
 }
 
@@ -196,7 +196,7 @@
 .Certifications {
   animation: move-text3 2s 4s forwards,reset-position2 2s linear 19s forwards;
 }
-.Education {
+.Educations {
   animation: move-text4 2s 6s forwards,reset-position3 2s linear 21s forwards;
 }
 .Achievements{
@@ -223,8 +223,6 @@
   display: grid;
   /* display: flex; */
   grid-template-columns: auto auto auto auto;
-  margin: -21% 0 0 25%;
-
 }
 
 .horizontalGrid1 {
@@ -232,7 +230,6 @@
   display: grid;
   /* display: flex; */
   grid-template-columns: auto auto auto auto;
-  margin: -18% 0 0 25%;
 
 }
 
@@ -246,7 +243,7 @@
   margin-left: 5%;
  }
 
- .SkillJs {
+ .Skill {
   position: relative;
   animation-name: bounce;
   animation-duration: 2s;
@@ -254,7 +251,7 @@
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   padding: 2%  2%  2%  2%;
-  margin-left: 5%;
+  margin-left: 35%;
  }
 
  @keyframes bounce {
@@ -272,16 +269,20 @@
 }
 
 .imageSet2 {
-  margin: 10px;
+  margin-left: 50px;
   padding: 10px;
   border: 2px solid white;
-  transition: transform 2s;
+  transition: transform 1s ease;
   /* transform: scale(0.5); */
 }
 
 .imageSet2:hover {
-  /* margin: 150px; */
-  transform: perspective(500px) scale(3, 3);
+  transform: perspective(500px) scale(3);
+  z-index: 1;
+}
+
+.lastImageOfRow:hover {
+  transform:translateX(-50%) perspective(500px) scale(3);
   z-index: 1;
 }
 

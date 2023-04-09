@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Work() {
   return (
-    <div style={{display:'flex',justifyContent:'auto',marginTop:'-21%'}}>
-      <div style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',padding:'0% 5% 5% 25%',justifyContent:'inherit',fontSize:'18px'}}>
+    <div>
+      <div style={{display:'grid',gridTemplateColumns:'repeat(2,1fr)',justifyContent:'inherit',fontSize:'18px'}}>
         <ul >
             <h1>Fis Global</h1>
             <li>Fixing and modifying features of an existing banking application using React Js.</li><br/>
