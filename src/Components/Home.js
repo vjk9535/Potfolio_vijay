@@ -1,7 +1,7 @@
 import React from 'react'
 import photo from '../photo.jpg'
 import { Image } from 'semantic-ui-react'
-import { Paper, MenuList, MenuItem,ListItemText,Divider,Box } from '@mui/material'
+import { Paper, MenuList, MenuItem,ListItemText,Divider,Box} from '@mui/material'
 import { useState} from 'react'
 import Work from './Work'
 import Certification from './Certification'
@@ -23,7 +23,6 @@ export default function Home(props) {
   const handleMenuClick = (key) => {
     setDisplayState({ ...Object.fromEntries(Object.entries(displayState).map(([k, v]) => [k, k === key])) });
   };
-
   const { Skills, WorkExperience, Certifications, Educations, Achievements, POC } = displayState;
 
   return (
@@ -49,9 +48,10 @@ export default function Home(props) {
           m: 1,
         },
         marginLeft:'5%',
+        marginTop:'1%'
       }}
     >
-        <Paper sx={{maxWidth: '100%', border: '1px solid black', textAlign: 'center' }} >
+        <Paper sx={{maxWidth: '100%', border: '1px solid black', textAlign: 'center'}} style={{height:'300px'}} >
           <MenuList sx={{width:200}}>
             {[
               { key: 'Skills', label: 'Skills' },
@@ -78,7 +78,6 @@ export default function Home(props) {
             ))}
           </MenuList>
         </Paper>
-      
       {Skills && <Skill />}
       {WorkExperience && <Work />}
       {Certifications && <Certification />}

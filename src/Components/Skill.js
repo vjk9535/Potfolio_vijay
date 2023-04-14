@@ -2,11 +2,11 @@
 import React from 'react';
 import { Image } from 'semantic-ui-react';
 
-function SkillItem({ imageSrc, label, tooltipTitle }) {
+function SkillItem({ imageSrc, label, tooltipTitle, rowNumber }) {
   return (
     <Tooltip title={tooltipTitle} placement='right'>
-      <span className='Skill'>
-        <Image src={imageSrc} size='tiny' />
+      <span className={`Skill${rowNumber}`}>
+        <Image src={imageSrc} size='tiny'/>
         <p>{label}</p>
       </span>
     </Tooltip>
@@ -26,11 +26,25 @@ export default function Skill() {
     { imageSrc: 'NodeLogo.png', label: 'NodeJS', tooltipTitle: '3/10' },
   ];
 
+  // Split the skills array into two separate arrays
+  const firstRowSkills = skills.slice(0, 4);
+  const secondRowSkills = skills.slice(4);
+
   return (
-    <div className='horizontalGrid1' style={{width:'100%'}}>
-      {skills.map((skill) => (
-        <SkillItem {...skill} />
-      ))}
+    <div style={{width:'100%'}}>
+      {/* Map over the first row skills and assign them the "Skill-first-row" class */}
+      <div className="horizontalGrid1">
+        {firstRowSkills.map((skill, index) => (
+          <SkillItem key={index} {...skill} rowNumber={1} />
+        ))}
+      </div>
+
+      {/* Map over the second row skills and assign them the "Skill-second-row" class */}
+      <div className="horizontalGrid1">
+        {secondRowSkills.map((skill, index) => (
+          <SkillItem key={index + 5} {...skill} rowNumber={2} />
+        ))}
+      </div>
     </div>
   );
 }
