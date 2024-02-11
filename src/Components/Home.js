@@ -83,7 +83,7 @@ const secondsLeft = timeLeft % 60;
           m: 1,
         },
         marginLeft:'5%',
-        marginTop:'1%'
+        marginTop:window.innerHeight<=720?'': '1%'
       }}
     >
         <Paper sx={{maxWidth: '100%', border: '1px solid black', textAlign: 'center'}} style={{height:'300px'}} >
@@ -129,7 +129,7 @@ const secondsLeft = timeLeft % 60;
           Front End (React JS) Developer
           </p>
           <p style={{ fontSize: '20px', fontWeight: 'bold', display: 'flex', justifyContent: 'center', padding: '0% 20% 5% 20%' }}>
-            " More than 2+ year of experience in front end development in React JS. Interested in learning new technologies and to successfully
+            " More than 1.5 year of relavent experience in front end development in React JS. Interested in learning new technologies and to successfully
             develop various features under minimal supervision. Good Knowledge working on Responsive UI using HTML5, CSS, JavaScript, ES6. "
           </p>
         </div>

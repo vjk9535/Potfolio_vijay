@@ -6,7 +6,7 @@ function SkillItem({ imageSrc, label, tooltipTitle, rowNumber }) {
   return (
     <Tooltip title={tooltipTitle} placement='right'>
       <span className={`Skill${rowNumber}`}>
-        <Image src={imageSrc} size='tiny'/>
+        <Image src={imageSrc} size={'tiny'}/>
         <p>{label}</p>
       </span>
     </Tooltip>
